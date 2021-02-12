@@ -1,21 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function CadstroLoja() {
-
-  var home = document.getElementById("logo");
-
-  home.onclick = function () {
-    window.location.href = "home.html";
-  };
-
-  var btn = document.getElementById("botao");
-
-  btn.onclick = function () {
-    window.location.href = "edit_perfil.html";
-  };
 
 	return(
 	<>
     <header>
-      <img src="/imagens/Group 1.png" alt="" id="logo" />
+      <Link to="/home"><img src="../../assets/imagens/Group 1.png" alt="" id="logo" /></Link>
     </header>
 
     <div id="inicio">
@@ -44,7 +34,7 @@ export default function CadstroLoja() {
         <input type="text" />
         <p>Senha</p>
         <input type="text" />
-        <button id="botao">Cadastrar</button>
+        <Link to="/"><button id="botao">Cadastrar</button></Link>
       </div>
     </div>
 
@@ -59,6 +49,5 @@ export default function CadstroLoja() {
     </p>
 
   </>
-	
 	);
 }

@@ -102,3 +102,31 @@
   display:flex;
   
 }
+
+.catalogo {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.description {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #ededed;
+  margin: 20px;
+}
+
+.description h3 {
+  padding: 10px;
+}
+
+.description span {
+  width: 250px;
+  align-self: center;
+  margin: auto;
+  text-align: center;
+}

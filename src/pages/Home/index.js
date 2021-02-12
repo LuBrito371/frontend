@@ -1,16 +1,18 @@
 import { useEffect } from "react";
 
 import Header from "../../components/Header";
-import styles from "./styles.css";
+import Produto from "../../components/Produto";
 
 import menuLogo from "../../assets/imagens/menu.png";
+
+import styles from "./styles.css";
 
 export default function Home(){
 
   useEffect(() => {
 
   },[]);
-  
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return(
 		<>
     <Header>
@@ -22,7 +24,27 @@ export default function Home(){
            </button>
            <h4>Procure por departamentos</h4>
          </div>
+         <div style={{display: "none"}} id="options">
+             <ul>
+               <li>
+                 <button>Pizza</button>
+               </li>
+               <li>
+                 <button>Massas</button>
+               </li>
+               <li>
+                 <button>Lanches</button>
+               </li>
+               <li>
+                 <button>Doces</button>
+               </li>
+               <li>
+                 <button>Blusas</button>
+               </li>
+             </ul>
+         </div>
        </div>
+      
       </>
     </Header>
 
@@ -40,7 +62,21 @@ export default function Home(){
 			</form>
     </div>
 
-    <div className="perfis"></div>
+    <div className="catalogo">
+      <div className="itens catalogo">
+      {data && data.map(()=> (
+        <Produto 
+          image="https://ui-avatars.com/api/?name=Ryann+Ferreira?size=16?background=random"
+          name="teste" 
+          price="2,50"
+         />
+        ))}
+      </div>
+      <div className="description">
+        <h3>Descrição</h3>
+        <span>{"teste teste  teste teste teste teste teste teste teste teste teste "}</span>
+      </div>
+    </div>
   </>
 	);
 }

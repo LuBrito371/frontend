@@ -14,7 +14,7 @@ export default function Header({children}) {
 					<input type="text" className="input"/>
 					<button>
 						<img src="https://img.icons8.com/android/16/000000/search.png" width={16}/>
-					</button>
+					</button> 
 				</div>
 			</div>
 			<div className="auth-container">
