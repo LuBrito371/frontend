@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/imagens/logo_shugo.png";
 
 import styles from "./styles.css";
@@ -18,8 +19,8 @@ export default function Header({children}) {
 				</div>
 			</div>
 			<div className="auth-container">
-				<button className="buttons-auth">ENTRAR</button>
-				<button className="buttons-auth sing-up">CADASTRAR</button>
+				<Link to="/login"><button className="buttons-auth">ENTRAR</button></Link>
+				<Link to="/cadastro"><button className="buttons-auth sing-up">CADASTRAR</button></Link>
 			</div>
 		</header>
 		{children}

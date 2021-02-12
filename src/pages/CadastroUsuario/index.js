@@ -1,27 +1,18 @@
+import { Link } from "react-router-dom";
 
+import logoShugo from "../../assets/imagens/logo_shugo.png";
+import userIcon from "../../assets/imagens/user.png";
 
 export default function CadastroUsuario() {
 
-      var home = document.getElementById("logo");
-
-      home.onclick = function () {
-        window.location.href = "home.html";
-      };
-
-      var btn = document.getElementById("botao");
-
-      btn.onclick = function () {
-        window.location.href = "edit_perfil.html";
-      };
- 
 	return(
 		<>
     <header>
-      <img src="/imagens/Group 1.png" alt="" id="logo" />
+      <img src={logoShugo} alt="" id="logo" />
     </header>
 
     <div id="inicio">
-      <img src="/imagens/user.png" alt="" />
+      <img src={userIcon} alt="" />
       <h1>Cadastre-se</h1>
     </div>
 
@@ -46,13 +37,13 @@ export default function CadastroUsuario() {
         <input type="text" />
         <p>Senha</p>
         <input type="text" />
-        <button id="botao">Cadastrar</button>
+        <Link to="/" ><button id="botao">Cadastrar</button></Link>
       </div>
     </div>
 
     <div id="direcionar">
       <p>Já tem uma conta?</p>
-      <a href="login.html">Entrar</a>
+      <Link to="/login">Entrar</Link>
     </div>
 
     <p id="rodapé">

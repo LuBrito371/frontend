@@ -1,9 +1,15 @@
-import styled from "./styles.css";
+import { useHistory, Link } from "react-router-dom";
+import styles from "./styles.css";
 
 import shugoLogo from "../../assets/imagens/logo_shugo.png";
 import userIcon from "../../assets/imagens/user.png";
 
 export default function Login(){
+  const history = useHistory();
+
+  function login(){
+    history.push("/home");
+  }
 
 	return(
 		<>
@@ -24,12 +30,12 @@ export default function Login(){
       <input type="text" id="email"/>
       <p>Senha</p>
       <input type="password" id="senha"/>
-      <button id="login">Login</button>
+      <button id="login" onClick={()=> login() }>Login</button>
     </div>
 
     <div id="direcionar">
         <p>Não tem um cadastro? </p>
-        <a href="#">Cadastre-se</a>
+        <Link to="cadastro">Cadastre-se</Link>
     </div>
     <p id="rodapé">Ao continuar com o acesso, você concorda com a nossa política de privacidade</p>
   </>
