@@ -1,17 +1,30 @@
 import { useEffect } from "react";
+import { Carousel } from 'react-responsive-carousel';
 
 import Header from "../../components/Header";
 import Produto from "../../components/Produto";
 
 import menuLogo from "../../assets/imagens/menu.png";
+import bannerImage1 from "../../assets/imagens/Frame 12.png";
+import bannerImage2 from "../../assets/imagens/Rectangle 2.png";
 
 import styles from "./styles.css";
+import stylesCarrosel from "./styles_carrosel.css";
 
-export default function Home(){
+export default async function Home(){
 
   useEffect(() => {
+    async function activate(){
+      const response = await fetch("http://localhost:3333/index/user");
 
+      const dados = await response.json();
+      console.log(dados);
+    }
+    activate();
   },[]);
+
+
+
   const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return(
 		<>
@@ -47,21 +60,20 @@ export default function Home(){
       
       </>
     </Header>
-
-    <div id="carrossel">
-			<a id="prev" href="javascript:menos()"></a>
-
-			<a id="aId">
-        <img id="imgId" style={{width: 900}}/>
-      </a>
-
-			<a id="next" href="javascript:mais()"></a>
-
-			<form name="form">
-				<input type="text" name="texto" />
-			</form>
-    </div>
-
+    <Carousel
+        showThumbs={false}
+        dynamicHeight
+      >
+      <div>
+        <img src={bannerImage1} />
+      </div>
+      <div>
+        <img src={bannerImage2}/>
+      </div>
+      <div>
+        <img src={bannerImage1} />
+      </div>
+    </Carousel>
     <div className="catalogo">
       <div className="itens catalogo">
       {data && data.map(()=> (
