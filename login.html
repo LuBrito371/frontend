@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/imagens/image 2.png" />
+    <title>Shugo - Login</title>
+    <link rel="stylesheet" href="/style/login.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="/imagens/Group 1.png" alt="" id="logo"/>
+    </header>
+    <div id="inicio">
+      <img src="/imagens/user.png" alt="" />
+      <h1>Login de usuário</h1>
+    </div>
+
+    <div id="barrinha">
+      <hr />
+      <p>Entre com seus dados</p>
+      <hr />
+    </div>
+
+    <div id="dados">
+      <p>Email</p>
+      <input type="text" id="email"/>
+      <p>Senha</p>
+      <input type="password" id="senha"/>
+    <button id="login">Login</button>
+    </div>
+
+    <div id="direcionar">
+        <p>Não tem um cadastro? </p>
+        <a href="tipo_conta.html">Cadastre-se</a>
+    </div>
+
+    <p id="rodapé">Ao continuar com o acesso, você concorda com a nossa política de privacidade</p>
+
+
+
+    <script>
+      var home = document.getElementById('logo');
+
+      home.onclick = function(){
+      window.location.href='home.html';
+      }
+
+      var email = document.getElementById('email');
+      var senha = document.getElementById('senha');
+
+      var btn = document.getElementById("login");
+
+      btn.onclick = function () {
+        
+      };
+
+      async function getContent() {
+      try {
+        const response = await fetch("http://...");
+        //console.log(response);
+        const data = await response.json();
+        show(data);
+      } catch (error) {
+        console.error("Burra do caralho");
+      }
+
+      getContent();
+
+      function show(user){
+        let output = ''
+
+        for(let user of users){
+          output += `<li>${user.name}</li>`
+        }
+
+        document.querySelector('p').innerHTML = output;
+      }
+    }        
+    </script>
+  </body>
+</html>
