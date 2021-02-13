@@ -1,3 +1,5 @@
+// import styles from "./styles.css";
+
 export default function EditPerfil(){
   return(
     <>

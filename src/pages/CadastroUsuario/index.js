@@ -1,9 +1,27 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import logoShugo from "../../assets/imagens/logo_shugo.png";
 import userIcon from "../../assets/imagens/user.png";
 
+import api from "../../services/api";
+
 export default function CadastroUsuario() {
+  const [email,setEmail]= useState("");
+  const [password,setPassword]= useState("");
+  const [nome,setNome]= useState("");
+  const [telefone,setTelefone]= useState("");
+  const [cnpj,setCNPJ]= useState("");
+  
+  async function cadastrarUsuario(){
+    api.post('/register/store',{
+      body: {
+        email,
+        password,
+        nome
+      }
+    });
+  }
 
 	return(
 		<>
@@ -24,20 +42,26 @@ export default function CadastroUsuario() {
 
     <div class="dados">
       <div id="dados1">
-        <p>Endereço</p>
-        <input type="text" />
         <p>Telefone</p>
-        <input type="text" />
+        <input type="text"
+          value={telefone}
+          onChange={event => setTelefone(event.target.value)} />
         <p>CNPJ</p>
-        <input type="text" />
+        <input type="text" 
+          value={cnpj}
+          onChange={event => setCNPJ(event.target.value)}/>
       </div>
 
       <div id="dados2">
         <p>Email</p>
-        <input type="text" />
+        <input type="text" 
+          value={email}
+          onChange={event => setEmail(event.target.value)}/>
         <p>Senha</p>
-        <input type="text" />
-        <Link to="/" ><button id="botao">Cadastrar</button></Link>
+        <input type="text" 
+          value={password}
+          onChange={event => setPassword(event.target.value)} />
+        <Link to="/" ><button id="botao" onClick={() => cadastrarUsuario()}>Cadastrar</button></Link>
       </div>
     </div>
 
