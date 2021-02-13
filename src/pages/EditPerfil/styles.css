@@ -1,139 +1,179 @@
 *{
-    color: #5d9b9b;
+  color: #5d9b9b;
 }
 
 body{
-    font-family: 'Roboto',sans-serif;
-    background-color:#E5E5E5;
-    margin: 0;
-    width:100%;
-    height:100%;
+  font-family: 'Roboto',sans-serif;
+  background-color:#E5E5E5;
+  margin: 0;
+  width:100%;
+  height:100%;
+
 }
 
 p{
-    font-style: italic;
+  font-style: italic;
 }
 
 header{
-    background-color:#5D9B9B;
-    height:80px;
-    display: flex;
+  background-color:#5D9B9B;
+  height:80px;
+  display: flex;
 }
 
 header img{
-    padding: 15px 0;
-    width: 200px;
+  padding: 15px 0;
+  width: 200px;
 }
 
 #capa{
-    width: 100%;
-    height: 220px;
-    background-color: rgb(239, 239, 239);
-    display: flex;
-    margin-top: 30px;
+  width: 100%;
+  height: 220px;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  color: #5d9b9b;
+  margin-top: 30px;
 }
 
 #foto{
-    width: 200px;
-    height: 200px;
-    background-color:rgb(239, 239, 239);
-    display: flex;
-    border-radius: 150px;
-    position: relative;
-    bottom: 170px;
-    left: 60px;
+  color: #5d9b9b;
+  width: 200px;
+  height: 200px;
+  background-color:rgb(239, 239, 239);
+  display: flex;
+  border-radius: 150px;
+  position: relative;
+  bottom: 170px;
+  left: 60px;
 }
 
 #foto img{
-    position: relative;
-    margin: auto;
-  align-items: center;
-  justify-content: center;
-  
+  position: relative;
+  margin: auto;
+align-items: center;
+justify-content: center;
+color: #5d9b9b;
 }
 
 #hora_func{
-    height: 100%;
-    width: 300px;
-    background-color: rgb(255, 255, 255, 0.7);
-    position: relative;
-    left: 850px;
-     
+  height: 100%;
+  width: 300px;
+  background-color: rgb(255, 255, 255, 0.7);
+  position: relative;
+  left: 750px;
+  color: #5d9b9b;
 }
 
 #hora_func h3{
-    justify-content: center;
-    align-items: center;
-    text-align: center;  
-    margin-bottom:0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;  
+  margin-bottom:0;
+  color: #5d9b9b;
 }
 
 #hora_func ul{
-    font-size: 12px;
+  font-size: 12px;
+  color: #5d9b9b;
 }
+
+#time{
+  display:flex;
+  color: #5d9b9b;
+}
+
+#horario{
+  display: flex;
+  height:25px;
+  color: #5d9b9b;
+}
+
+#horario p{
+  font-size: 12px;
+  color: #5d9b9b;
+}
+
 
 #nome_slogan{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 160px;
-    height: 40px;
-    text-align: center;
-    bottom: 180px;
-    left: 80px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  bottom: 180px;
+  left: 80px;
+  color: #5d9b9b;
 }
 
-.catalogo{
-    position: relative;
-    left: 50px;
-    width: 1000px;
-    height: 100%;
-    bottom: 130px;
+#n, #s{
+  display:flex;
+  width: 500px;
+  height: 30px;
+  color: #5d9b9b; 
+}
+
+#categorias{
+  position: relative;
+  left: 400px;
+  bottom: 80px;
+  color: #5d9b9b;
+}
+
+.catalogo #titulo{
+  position: relative;
+  left: 50px;
+  width: 1000px;
+  height: 100%;
+  bottom: 130px;
+  color: #5d9b9b;
 }
 
 #titulo{
-    display: flex;
-    margin: auto;
-    align-items: center;
-    position: relative;
-    
+  display: flex;
+  margin: auto;
+  align-items: center;
+  position: relative;
+  color: #5d9b9b;
 }
 
 #titulo button{
-    background-color: #5d9b9b;
-    color: white;
-    width: 140px;
-    height: 30px;
-    margin-left: 30px;
-    border: none;
-    border-radius: 20px;
+  background-color: #5d9b9b;
+  color: white;
+  width: 140px;
+  height: 30px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 20px;
 }
 
-.itens{
-    display:flex;
-    box-sizing:border-box;
-    justify-content: space-around;
+.itens #item{
+  width: 100%;
+  color: #5d9b9b;
 }
 
 #item{
-    width: 300px;
-    height: 100px;
-    background-color: white;
-    border-radius: 9px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border-radius: 9px;
+  color: #5d9b9b;
 }
 
 #descricao{
-    position: relative;
-    left: 1200px;
-    bottom: 400px;
-    width: 250px;
-    height: 300px;
-    background-color:white;
+  position: relative;
+  left: 1070px;
+  bottom: 400px;
+  width: 250px;
+  height: 500px;
+  background-color:white;
+  justify-content: center;
+  text-align: center;
 }
 
 #descricao h3{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
