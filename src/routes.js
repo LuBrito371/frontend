@@ -6,7 +6,11 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/CadastroUsuario";
 import EditPerfil from "./pages/EditPerfil";
+<<<<<<< HEAD
 import Loja from "./pages/Loja";
+=======
+
+>>>>>>> 1c7f7c3c83da566d2a485e8b8cb56a35128058c3
 export default function Routes(){
 	return(
 		<Router>
@@ -29,11 +33,15 @@ export default function Routes(){
 
 				<Route path="/edit">
 					<EditPerfil/>
+<<<<<<< HEAD
 					</Route>
 
 					<Route path="/loja">
 					<Loja/>
 					</Route>
+=======
+				</Route>
+>>>>>>> 1c7f7c3c83da566d2a485e8b8cb56a35128058c3
 			</Switch>
 		</Router>
 	);

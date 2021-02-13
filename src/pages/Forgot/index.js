@@ -1,3 +1,5 @@
+import api from "../../services/api";
+
 export default function Forgot() {
   <>
     <header>
@@ -18,7 +20,7 @@ export default function Forgot() {
     <div id="dados">
       <p>Digite seu email para confirmação</p>
       <input type="text" id="email" />
-      <button id="login">Solicitar</button>
+      <button id="login" onClick={()=> {}}>Solicitar</button>
     </div>
   </>
 }

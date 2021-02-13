@@ -1,14 +1,35 @@
+import { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import styles from "./styles.css";
 
 import shugoLogo from "../../assets/imagens/logo_shugo.png";
 import userIcon from "../../assets/imagens/user.png";
 
+import api from "../../services/api";
+
 export default function Login(){
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+
   const history = useHistory();
 
-  function login(){
-    history.push("/home");
+  async function loginUser(){
+    const response = await api.get("/authenticate/store",{
+      body: {
+        email,
+        password
+      }
+    })
+
+    if(response.status == 400) {
+      alert("erro no login, veja se seus dados estão certos");
+      return 
+    }
+
+    localStorage.setItem("user", "");
+    localStorage.setItem("loja", "n");
+    
+    history.push("home");
   }
 
 	return(
@@ -27,10 +48,18 @@ export default function Login(){
 
     <div id="dados">
       <p>Email</p>
-      <input type="text" id="email"/>
+      <input  
+          type="text" 
+          id="email" 
+          value={email}
+          onChange={event => setEmail(event.target.value)}
+        />
       <p>Senha</p>
-      <input type="password" id="senha"/>
-      <button id="login" onClick={()=> login() }>Login</button>
+      <input type="password" 
+        id="senha"
+        value={password}
+        onChange={event => setPassword(event.target.value)}/>
+      <button id="login" onClick={()=> loginUser() }>Login</button>
     </div>
 
     <div id="direcionar">

@@ -4,6 +4,7 @@ import logo from "../../assets/imagens/logo_shugo.png"
 export default function EditPerfil() {
 
   return (
+
     <>
       <header class="edit">
         <img src={logo} alt="" />
