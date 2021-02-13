@@ -98,3 +98,9 @@ body{
   position: relative;
   margin:auto;
 }
+
+#estrelas{
+  display: flex;
+  width:150px;
+  height: 40px;
+}

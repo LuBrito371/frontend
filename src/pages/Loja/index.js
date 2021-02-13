@@ -1,6 +1,9 @@
 import Produto from "../../components/Produto";
 import styles from "./styles.css";
 
+import estrela1 from "../../assets/imagens/star_escura.png";
+import estrela2 from "../../assets/imagens/star_clara.png";
+
 import Header from "../../components/Header";
 
 export default function Loja() {
@@ -8,10 +11,7 @@ export default function Loja() {
 
   return (
     <>
-      <Header>
-	  
-	  </Header>
-
+      <Header></Header>
 
       <div id="capa">
         <img src="/imagens/menu.png" alt="" />
@@ -42,7 +42,7 @@ export default function Loja() {
           <br />
         </div>
         <div className="itens">
-		{data &&
+          {data &&
             data.map(() => (
               <Produto
                 image="https://ui-avatars.com/api/?name=Ryann+Ferreira?size=16?background=random"
@@ -55,15 +55,80 @@ export default function Loja() {
 
       <div id="nota">
         <h4>Média de Avaliações</h4>
+        
       </div>
 
       <div id="avaliacao">
         <h4>Avalie essa loja</h4>
-      </div>
+		<div id="estrelas" >
+          <img src={estrela1} id="um" onClick={() =>mudarcor1()}/>
+
+          <img src={estrela1} id="dois" onClick={() =>mudarcor2()}/>
+
+          <img src={estrela1} id="tres"onClick={() =>mudarcor3()}/>
+
+          <img src={estrela1} id="quatro"onClick={() =>mudarcor4()}/>
+
+          <img src={estrela1} id="cinco"onClick={() =>mudarcor5()}/>
+		
+		</div>
+		<h1 id="n"></h1>
+	  </div>
 
       <div id="descricao">
         <h3>Descrição</h3>
       </div>
     </>
   );
+}
+function mudarcor1(){
+	var star = document.querySelector("#um");
+	star.setAttribute('src', estrela2)
+	var nota = document.querySelector("#n")
+	nota.innerHTML = "1"
+}
+
+function mudarcor2(){
+	var star = document.querySelector("#um");
+	var star2 = document.querySelector("#dois");
+	star.setAttribute('src', estrela2)
+	star2.setAttribute('src', estrela2)
+	var nota = document.querySelector("#n")
+	nota.innerHTML = "2"
+}
+function mudarcor3(){
+	var star = document.querySelector("#um");
+	var star3 = document.querySelector("#tres");
+	var star2 = document.querySelector("#dois");
+	star.setAttribute('src', estrela2)
+	star2.setAttribute('src', estrela2)
+	star3.setAttribute('src', estrela2)
+	var nota = document.querySelector("#n")
+	nota.innerHTML = "3"
+}
+function mudarcor4(){
+	var star = document.querySelector("#um");
+	var star3 = document.querySelector("#tres");
+	var star2 = document.querySelector("#dois");
+	var star4 = document.querySelector("#quatro");
+	star.setAttribute('src', estrela2)
+	star2.setAttribute('src', estrela2)
+	star3.setAttribute('src', estrela2)
+	star4.setAttribute('src', estrela2)
+	var nota = document.querySelector("#n")
+	nota.innerHTML = "4"
+}
+function mudarcor5(){
+	var star = document.querySelector("#um");
+	var star3 = document.querySelector("#tres");
+	var star2 = document.querySelector("#dois");
+	var star4 = document.querySelector("#quatro");
+	var star5 = document.querySelector("#cinco");
+	star.setAttribute('src', estrela2)
+	star2.setAttribute('src', estrela2)
+	star3.setAttribute('src', estrela2)
+	star4.setAttribute('src', estrela2)
+	star5.setAttribute('src', estrela2)
+	var nota = document.querySelector("#n")
+	nota.innerHTML = "5"
 }
