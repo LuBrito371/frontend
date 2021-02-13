@@ -1,9 +1,6 @@
-export default function Loja() {
-	var home = document.getElementById('logo');
+import api from "../../services/api";
 
-	home.onclick = function () {
-		window.location.href = 'home.html';
-	}
+export default function Loja() {
 
 	return (
 		<>

@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/CadastroUsuario";
 import EditPerfil from "./pages/EditPerfil";
+
 export default function Routes(){
 	return(
 		<Router>
@@ -28,7 +29,7 @@ export default function Routes(){
 
 				<Route path="/edit">
 					<EditPerfil/>
-					</Route>
+				</Route>
 			</Switch>
 		</Router>
 	);

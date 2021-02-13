@@ -2,6 +2,7 @@ import styles from "./styles.css";
 
 export default function EditPerfil() {
   return (
+
     <>
       <header>
         <img src="/imagens/Group 1.png" alt="" />
