@@ -20,7 +20,7 @@ export default function Header({children}) {
 			</div>
 			<div className="auth-container">
 				<Link to="/login"><button className="buttons-auth">ENTRAR</button></Link>
-				<Link to="/cadastro"><button className="buttons-auth sing-up">CADASTRAR</button></Link>
+				<Link to="/tipoconta"><button className="buttons-auth sing-up">CADASTRAR</button></Link>
 			</div>
 		</header>
 		{children}

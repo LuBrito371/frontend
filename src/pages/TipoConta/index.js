@@ -1,17 +1,13 @@
+import { Link } from "react-router-dom";
+import styles from "./styles.css";
+import logo from "../../assets/imagens/logo_shugo.png"
 export default function TipoConta() {
-
-  var home = document.getElementById('logo');
-
-  home.onclick = function () {
-    window.location.href = 'home.html';
-  }
-  
 
 
   return (
     <>
       <header class="tipo">
-        <img src="/imagens/Group 1.png" alt="" id="logo" />
+        <img src={logo} alt="" id="logo" />
       </header>
 
       <div id="inicio">
@@ -20,14 +16,14 @@ export default function TipoConta() {
 
       <div class="botão">
         <div id="btn_container">
-          <a href="cadastro_usuário.html">Cliente</a>
+        <Link to="/cadastrousuario"><a href="/cadastrousuario">Cliente</a></Link>
           <p>Avalie estabelecimentos</p>
         </div>
       </div>
 
       <div class="botão">
         <div id="btn_container">
-          <a href="cadastro_loja.html"> Loja </a>
+          <Link to="/cadastroloja"><a href="/cadastroloja"> Loja </a></Link>
           <p>Crie um perfil para seu estabelecimento</p>
         </div>
       </div>

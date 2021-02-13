@@ -4,19 +4,21 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import Cadastro from "./pages/CadastroUsuario";
+import CadastroUsuario from "./pages/CadastroUsuario";
+import CadastroLoja from "./pages/CadastroLoja";
 import EditPerfil from "./pages/EditPerfil";
-<<<<<<< HEAD
 import Loja from "./pages/Loja";
-=======
-
->>>>>>> 1c7f7c3c83da566d2a485e8b8cb56a35128058c3
+import TipoConta from "./pages/TipoConta"
 export default function Routes(){
 	return(
 		<Router>
 			<Switch>
 				<Route path="/" exact>
 					<Home />
+				</Route>
+
+				<Route path="/tipoconta" exact>
+					<TipoConta />
 				</Route>
 
 				<Route path="/login">
@@ -27,21 +29,21 @@ export default function Routes(){
 					<Home />
 				</Route>
 
-				<Route path="/cadastro">
-					<Cadastro />
+				<Route path="/cadastrousuario">
+					<CadastroUsuario />
+				</Route>
+
+				<Route path="/cadastroloja">
+					<CadastroLoja />
 				</Route>
 
 				<Route path="/edit">
 					<EditPerfil/>
-<<<<<<< HEAD
 					</Route>
 
 					<Route path="/loja">
 					<Loja/>
 					</Route>
-=======
-				</Route>
->>>>>>> 1c7f7c3c83da566d2a485e8b8cb56a35128058c3
 			</Switch>
 		</Router>
 	);

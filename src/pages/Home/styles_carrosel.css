@@ -7,7 +7,7 @@
   transition: all 0.25s ease-in;
   opacity: 0.4;
   filter: alpha(opacity=40);
-  position: absolute;
+  
   z-index: 2;
   top: 20px;
   background: none;

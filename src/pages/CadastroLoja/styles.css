@@ -21,7 +21,7 @@ p{
     padding:15px 0;
 }
 
-#inicio{
+#inicioLoja{
     display: flex;
     margin: auto;
     align-items: center;
@@ -29,23 +29,23 @@ p{
     justify-content: center;
 }
 
-#inicio h1{
+#inicioLoja h1{
     color: #5D9B9B;
     font-size: 30px;
 }
 
-#inicio img{
+#inicioLoja img{
     width:50px;
     height:50px;
 }
 
 
-#barrinha{
+#barrinhaLoja{
     display: flex;
     align-items: center;
 }
 
-#barrinha hr{
+#barrinhaLoja hr{
     width:500px;
 }
 
@@ -57,21 +57,21 @@ input{
 
 }
 
-.dados{
+.dadosLoja{
     display: flex;
 }
 
-#dados1{
+#dados1Loja{
     margin: auto;
     width:35%;
     
 }
 
-#dados2{
+#dados2Loja{
     margin: auto;
 }
 
-#botao{
+#botaoLoja{
     width: 500px;
     height:50px;
     background: #5d9b9b;
@@ -89,17 +89,17 @@ input{
 
 
 
-#direcionar{
+#direcionarLoja{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top:50px;
 }
 
-#direcionar a{ 
+#direcionarLoja a{ 
     font-style: italic;
 }
 
-#rodapé{
+#rodapéLoja{
     text-align: center;
 }

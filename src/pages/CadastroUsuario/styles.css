@@ -10,13 +10,13 @@ p{
     font-style: italic;
 }
 
-.cadUso {
+.cad {
     background-color:#5D9B9B;
     height:100px;
-    color: white;
+    
 }
 
-.cadUso img{
+.cad img{
     width: 300px;
     padding:15px 0;
 }

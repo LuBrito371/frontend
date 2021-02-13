@@ -1,19 +1,5 @@
-<<<<<<< HEAD
 import Produto from "../../components/Produto";
 import styles from "./styles.css";
-=======
-import api from "../../services/api";
-
-export default function Loja() {
-
-	return (
-		<>
-			<header>
-				<img src="/imagens/Group 1.png" alt="" id="logo"/>
-				<div id="barra_pesquisa">
-					<input type="text" />
-				</div>
->>>>>>> 1c7f7c3c83da566d2a485e8b8cb56a35128058c3
 
 import Header from "../../components/Header";
 

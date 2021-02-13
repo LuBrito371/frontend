@@ -1,3 +1,5 @@
+import styles from "./styles.css";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,12 +8,11 @@ import userIcon from "../../assets/imagens/user.png";
 
 import api from "../../services/api";
 
+
 export default function CadastroUsuario() {
   const [email,setEmail]= useState("");
   const [password,setPassword]= useState("");
   const [nome,setNome]= useState("");
-  const [telefone,setTelefone]= useState("");
-  const [cnpj,setCNPJ]= useState("");
   
   async function cadastrarUsuario(){
     api.post('/register/store',{
@@ -25,7 +26,7 @@ export default function CadastroUsuario() {
 
 	return(
 		<>
-    <header class="cadUsu">
+    <header class="cad">
       <img src={logoShugo} alt="" id="logo" />
     </header>
 
@@ -42,14 +43,11 @@ export default function CadastroUsuario() {
 
     <div class="dados">
       <div id="dados1">
-        <p>Telefone</p>
+        <p>Nome</p>
         <input type="text"
-          value={telefone}
-          onChange={event => setTelefone(event.target.value)} />
-        <p>CNPJ</p>
-        <input type="text" 
-          value={cnpj}
-          onChange={event => setCNPJ(event.target.value)}/>
+          value={nome}
+          onChange={event => setNome(event.target.value)} />
+        
       </div>
 
       <div id="dados2">

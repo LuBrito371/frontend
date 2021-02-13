@@ -1,98 +1,56 @@
-import { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-
-import api from "../../services/api";
+import styles from "./styles.css";
+import logo from "../../assets/imagens/logo_shugo.png"
+import user from "../../assets/imagens/user.png"
+import { Link } from "react-router-dom";
 
 export default function CadstroLoja() {
-  const [email,setEmail]= useState("");
-  const [password,setPassword]= useState("");
-  const [endereco,setEndereco]= useState("");
-  const [telefone,setTelefone]= useState("");
-  const [cnpj,setCNPJ]= useState("");
-  
-  const history = useHistory();
 
-  async function cadastrarUsuario(){
-    const response = await api.post('/register/store',{
-      body: {
-        email,
-        password,
-        endereco,
-        telefone,
-        cnpj
-      }
-    });
-    if(response.status === 400) {
-      alert("erro no cadastro");
-    } else {
-      localStorage.setItem("loja","s");
-      localStorage.setItem("user", "");
-      history.push("/home");
-    }
-  }
-
-<<<<<<< HEAD
 	return(
 	<>
     <header class="cadLoj">
-      <Link to="/home"><img src="../../assets/imagens/Group 1.png" alt="" id="logo" /></Link>
-=======
-  return(
-    <>
-    <header>
-      <img src={logoShugo} alt="" id="logo" />
->>>>>>> 1c7f7c3c83da566d2a485e8b8cb56a35128058c3
+      <Link to="/home"><img src={logo} alt="" id="logo" /></Link>
     </header>
 
-    <div id="inicio">
-      <img src={userIcon} alt="" />
+    <div id="inicioLoja">
+      <img src={user} alt="" />
       <h1>Cadastre-se</h1>
     </div>
 
-    <div id="barrinha">
+    <div id="barrinhaLoja">
       <hr />
       <p>Preencha o formulário abaixo</p>
       <hr />
     </div>
 
-    <div class="dados">
-      <div id="dados1">
+    <div class="dadosLoja">
+      <div id="dados1Loja">
         <p>Endereço</p>
-        <input type="text" 
-          value={endereco}
-          onChange={event => setEndereco(event.target.value)}/>
+        <input type="text" />
         <p>Telefone</p>
-        <input type="text"
-          value={telefone}
-          onChange={event => setTelefone(event.target.value)} />
+        <input type="text" />
         <p>CNPJ</p>
-        <input type="text" 
-          value={cnpj}
-          onChange={event => setCNPJ(event.target.value)}/>
+        <input type="text" />
       </div>
 
-      <div id="dados2">
+      <div id="dados2Loja">
         <p>Email</p>
-        <input type="text" 
-          value={email}
-          onChange={event => setEmail(event.target.value)}/>
+        <input type="text" />
         <p>Senha</p>
-        <input type="text" 
-          value={password}
-          onChange={event => setPassword(event.target.value)} />
-        <Link to="/" ><button id="botao" onClick={() => cadastrarUsuario()}>Cadastrar</button></Link>
+        <input type="text" />
+        <Link to="/"><button id="botaoLoja">Cadastrar</button></Link>
       </div>
     </div>
 
-    <div id="direcionar">
+    <div id="direcionarLoja">
       <p>Já tem uma conta?</p>
-      <Link to="/login">Entrar</Link>
+      <a href="login.html">Entrar</a>
     </div>
 
-    <p id="rodapé">
+    <p id="rodapéLoja">
       Ao continuar com o acesso, você concorda com a nossa política de
       privacidade
     </p>
+
   </>
 	);
 }
