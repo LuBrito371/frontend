@@ -1,26 +1,27 @@
-* {
+*{
   color: #5d9b9b;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #e5e5e5;
+body{
+  font-family: 'Roboto',sans-serif;
+  background-color:#E5E5E5;
   margin: 0;
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
+
 }
 
-p {
+p{
   font-style: italic;
 }
 
-header {
-  background-color: #5d9b9b;
-  height: 80px;
+header{
+  background-color:#5D9B9B;
+  height:80px;
   display: flex;
 }
 
-header img {
+header img{
   padding: 15px 0;
   width: 200px;
 }
@@ -30,13 +31,15 @@ header img {
   height: 220px;
   background-color: rgb(239, 239, 239);
   display: flex;
+  color: #5d9b9b;
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .container-editperfil #foto {
   width: 200px;
   height: 200px;
-  background-color: rgb(239, 239, 239);
+  background-color:rgb(239, 239, 239);
   display: flex;
   border-radius: 150px;
   position: relative;
@@ -44,33 +47,54 @@ header img {
   left: 60px;
 }
 
-#foto img {
+#foto img{
   position: relative;
   margin: auto;
-  align-items: center;
-  justify-content: center;
+align-items: center;
+justify-content: center;
+color: #5d9b9b;
 }
 
-#hora_func {
+#hora_func{
   height: 100%;
   width: 300px;
   background-color: rgb(255, 255, 255, 0.7);
   position: relative;
-  left: 850px;
+  left: 750px;
+  color: #5d9b9b;
 }
 
-#hora_func h3 {
+#hora_func h3{
   justify-content: center;
   align-items: center;
-  text-align: center;
-  margin-bottom: 0;
+  text-align: center;  
+  margin-bottom:0;
+  color: #5d9b9b;
 }
 
-#hora_func ul {
+#hora_func ul{
   font-size: 12px;
+  color: #5d9b9b;
 }
 
-#nome_slogan {
+#time{
+  display:flex;
+  color: #5d9b9b;
+}
+
+#horario{
+  display: flex;
+  height:25px;
+  color: #5d9b9b;
+}
+
+#horario p{
+  font-size: 12px;
+  color: #5d9b9b;
+}
+
+
+#nome_slogan{
   position: relative;
   justify-content: center;
   align-items: center;
@@ -79,24 +103,41 @@ header img {
   text-align: center;
   bottom: 180px;
   left: 80px;
+  color: #5d9b9b;
 }
 
-.catalogo {
+#n, #s{
+  display:flex;
+  width: 500px;
+  height: 30px;
+  color: #5d9b9b; 
+}
+
+#categorias{
+  position: relative;
+  left: 400px;
+  bottom: 80px;
+  color: #5d9b9b;
+}
+
+.catalogo #titulo{
   position: relative;
   left: 50px;
   width: 1000px;
   height: 100%;
   bottom: 130px;
+  color: #5d9b9b;
 }
 
-#titulo {
+#titulo{
   display: flex;
   margin: auto;
   align-items: center;
   position: relative;
+  color: #5d9b9b;
 }
 
-#titulo button {
+#titulo button{
   background-color: #5d9b9b;
   color: white;
   width: 140px;
@@ -106,29 +147,31 @@ header img {
   border-radius: 20px;
 }
 
-.itens {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
+.itens #item{
+  width: 100%;
+  color: #5d9b9b;
 }
 
-#item {
+#item{
   width: 300px;
   height: 100px;
   background-color: white;
   border-radius: 9px;
+  color: #5d9b9b;
 }
 
-#descricao {
+#descricao{
   position: relative;
-  left: 1200px;
+  left: 1070px;
   bottom: 400px;
   width: 250px;
-  height: 300px;
-  background-color: white;
+  height: 500px;
+  background-color:white;
+  justify-content: center;
+  text-align: center;
 }
 
-#descricao h3 {
+#descricao h3{
   position: relative;
   justify-content: center;
   align-items: center;

@@ -28,7 +28,7 @@ export default function Routes(){
 				</Route>
 
 				<Route path="/edit">
-					<Cadastro />
+					<EditPerfil/>
 				</Route>
 			</Switch>
 		</Router>
