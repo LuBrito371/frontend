@@ -13,7 +13,7 @@ export default function Login(){
 
 	return(
 		<>
-    <header>
+    <header class="login">
       <img src={shugoLogo} alt="" id="logo"/>
     </header>
     <div id="inicio">

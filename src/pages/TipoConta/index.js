@@ -5,10 +5,12 @@ export default function TipoConta() {
   home.onclick = function () {
     window.location.href = 'home.html';
   }
+  
+
 
   return (
     <>
-      <header>
+      <header class="tipo">
         <img src="/imagens/Group 1.png" alt="" id="logo" />
       </header>
 

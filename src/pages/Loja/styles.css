@@ -1,21 +1,21 @@
-*{
-    color: #5d9b9b;
+* {
+  color: #5d9b9b;
 }
 
-body{
-    font-family: 'Roboto',sans-serif;
-    background-color:#E5E5E5;
-    margin: 0;
-    width:100%;
-    height:100%;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e5e5e5;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
-p{
-    font-style: italic;
+p {
+  font-style: italic;
 }
 
-header{
-    height: 80px;
+.loja {
+  height: 80px;
   background-color: #5d9b9b;
   display: flex;
   align-items: center;
@@ -23,189 +23,214 @@ header{
   margin: auto;
 }
 
-header img{
-    padding: 15px 0;
-    width: 200px;
+.loja img {
+  padding: 15px 0;
+  width: 200px;
 }
 
 #entrar {
-    width: 100px;
-    height: 30px;
-    border: 2px solid white;
-    border-radius: 7px;
-    display: flex;
-  }
-  
-  #entrar a {
-    color: white;
-    font-weight: bold;
-    position: relative;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  #cadastrar {
-    width: 100px;
-    height: 30px;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 7px;
-    display: flex;
-  }
-  
-  #cadastrar a {
-    color: #5d9b9b;
-    font-weight: bold;
-    position: relative;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  #barra_pesquisa input {
-    width: 700px;
-    height: 25px;
-    background: url(/imagens/mdi_search.png);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-color: white;
-    border-radius: 10px;
-    border: none;
-  }
-
-#capa{
-    width: 100%;
-    height: 220px;
-    background-color: rgb(239, 239, 239);
-    display: flex;
-    margin-top: 30px;
+  width: 100px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 7px;
+  display: flex;
 }
 
-#foto{
-    width: 200px;
-    height: 200px;
-    background-color:rgb(239, 239, 239);
-    display: flex;
-    border-radius: 150px;
-    position: relative;
-    bottom: 170px;
-    left: 60px;
-}
-
-#foto img{
-    position: relative;
-    margin: auto;
+#entrar a {
+  color: white;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
   align-items: center;
   justify-content: center;
-  
+  text-align: center;
 }
 
-#hora_func{
-    height: 100%;
-    width: 300px;
-    background-color: rgb(255, 255, 255, 0.7);
-    position: relative;
-    left: 850px;
-     
+#cadastrar {
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 7px;
+  display: flex;
 }
 
-#hora_func h3{
-    justify-content: center;
-    align-items: center;
-    text-align: center;  
-    margin-bottom:0;
+#cadastrar a {
+  color: #5d9b9b;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-#hora_func ul{
-    font-size: 12px;
+#barra_pesquisa input {
+  width: 700px;
+  height: 25px;
+  background: url(../../assets/imagens/mdi_search.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
 }
 
-#nome_slogan{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 160px;
-    height: 40px;
-    text-align: center;
-    bottom: 180px;
-    left: 80px;
+#capa {
+  width: 100%;
+  height: 220px;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  margin-top: 30px;
 }
 
-#nota{
-    position:relative;
-    bottom: 430px;
-    left: 400px;
-    border-radius: 9px;
-    width: 150px;
-    height: 120px;
-    background-color: white;
-    margin:none;
+#foto {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  border-radius: 150px;
+  position: relative;
+  bottom: 170px;
+  left: 60px;
 }
 
-#avaliacao{
-    position:relative;
-    bottom: 550px;
-    left: 700px;
-    border-radius: 9px;
-    width: 300px;
-    height: 120px;
-    background-color: white;
-    margin:none;
+#foto img {
+  position: relative;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
-#avaliacao h4{
-    margin:0;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#hora_func {
+  height: 100%;
+  width: 300px;
+  background-color: rgb(255, 255, 255, 0.7);
+  position: relative;
+  left: 750px;
+  color: #5d9b9b;
 }
 
-.catalogo{
-    position: relative;
-    left: 50px;
-    width: 1000px;
-    height: 100%;
-    bottom: 130px;
+#hora_func h3 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  color: #5d9b9b;
 }
 
-#nome{
-    display:flex;
-    align-items: center;
+#hora_func ul {
+  font-size: 12px;
+  color: #5d9b9b;
 }
 
-#nome hr{
-    width: 850px;
+#time {
+  display: flex;
+  color: #5d9b9b;
 }
 
-.itens{
-    display:flex;
-    box-sizing:border-box;
-    justify-content: space-around;
+#horario {
+  display: flex;
+  height: 25px;
+  color: #5d9b9b;
 }
 
-#item{
-    width: 300px;
-    height: 100px;
-    background-color: white;
-    border-radius: 9px;
+#horario p {
+  font-size: 12px;
+  color: #5d9b9b;
+}
+
+#nome_slogan {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  bottom: 180px;
+  left: 80px;
+}
+
+#nota {
+  position: relative;
+  bottom: 430px;
+  left: 400px;
+  border-radius: 9px;
+  width: 150px;
+  height: 120px;
+  background-color: white;
+  margin: none;
+}
+
+#avaliacao {
+  position: relative;
+  bottom: 550px;
+  left: 700px;
+  border-radius: 9px;
+  width: 300px;
+  height: 120px;
+  background-color: white;
+  margin: none;
+}
+
+#avaliacao h4 {
+  margin: 0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.catalogo {
+  position: relative;
+  left: 50px;
+  width: 1000px;
+  height: 100%;
+  bottom: 130px;
+  color: #5d9b9b;
+}
+
+#titulo {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  position: relative;
+  color: #5d9b9b;
+}
+
+#titulo button {
+  background-color: #5d9b9b;
+  color: white;
+  width: 140px;
+  height: 30px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 20px;
+}
+
+.itens #item {
+  width: 100%;
+  color: #5d9b9b;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #descricao{
     position: relative;
-    left: 1200px;
-    bottom: 670px;
+    left: 1000px;
+    bottom: 400px;
     width: 250px;
-    height: 300px;
+    height: 500px;
     background-color:white;
-}
-
-#descricao h3{
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #descricao h3{
     position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+  }

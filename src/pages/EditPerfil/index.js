@@ -1,14 +1,16 @@
 import styles from "./styles.css";
+import logo from "../../assets/imagens/logo_shugo.png"
 
 export default function EditPerfil() {
+
   return (
     <>
-      <header>
-        <img src="/imagens/Group 1.png" alt="" />
+      <header class="edit">
+        <img src={logo} alt="" />
       </header>
 
       <div id="capa">
-        <img src="/imagens/menu.png" alt="" />
+        <img   alt="" />
         <div id="hora_func">
           <h3>Horário de Funcionamento</h3>
           <div id="horario">
@@ -130,28 +132,11 @@ export default function EditPerfil() {
           </button>
         </div>
         <div class="itens">
-          <div id="item"></div>
+        
         </div>
       </div>
 
-      <div id="descricao" onClick={() => addDescricao()}>
-        <h3>Descrição</h3>
-        <input type="text" id="desc" />
-        <button id="addD">add</button>
-        <p id="d">Adicionar descrição</p>
-
-        <input type="text" id="ender" />
-        <button id="addE" onClick={() => addEndereco()}>
-          add
-        </button>
-        <p id="e">Adicionar endereço</p>
-
-        <input type="text" id="telef" />
-        <button id="addT" onClick={() => addTelefone()}>
-          add
-        </button>
-        <p id="t">Adicionar telefone</p>
-      </div>
+      
     </>
   );
 }
@@ -160,11 +145,16 @@ function qualquer_ai() {
   var btn = document.querySelector("#add");
   var item = document.querySelector(".itens");
   var itemNovo = document.createElement("div");
-  itemNovo.style.width = "300px";
-  itemNovo.style.height = "100px";
-  itemNovo.style.backgroundColor = "#ffffff";
-  itemNovo.style.borderRadius = "9px";
-  itemNovo.style.margin = "0";
+  itemNovo.style.display= "flex";
+  itemNovo.style.width= "250px";
+  itemNovo.style.height= "110px";
+  itemNovo.style.flexDirection= "row";
+  itemNovo.style.alignItems= "center";
+  itemNovo.style.justifyContent= "space-between";
+  itemNovo.style.margin="20px 40px";
+  itemNovo.style.background= "#FFF";
+  itemNovo.style.boxShadow= "1px 2px 4px #33333320";
+  itemNovo.style.borderRadius= "6px";
   item.appendChild(itemNovo);
 }
 

@@ -1,4 +1,6 @@
-
+body{
+  width:100%;
+}
 .parte_branca {
   display: flex;
   height: 50px;
@@ -60,7 +62,7 @@
   height:70px;
 }
 
-.catalogo {
+.perfis {
   display: flex;
   flex: 1;
   justify-content: center;

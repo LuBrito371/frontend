@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 
 import Header from "../../components/Header";
-import Produto from "../../components/Produto";
+  
 
 import menuLogo from "../../assets/imagens/menu.png";
 import bannerImage1 from "../../assets/imagens/shugo1.png";
@@ -58,16 +58,9 @@ export default function Home() {
           <img src={bannerImage1} />
         </div>
       </Carousel>
-      <div className="catalogo">
-        <div className="itens catalogo">
-          {data &&
-            data.map(() => (
-              <Produto
-                image="https://ui-avatars.com/api/?name=Ryann+Ferreira?size=16?background=random"
-                name="teste"
-                price="2,50"
-              />
-            ))}
+      <div className="perfis  ">
+        <div className="itens perfis">
+          
         </div>
         
       </div>

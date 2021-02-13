@@ -7,7 +7,7 @@ export default function CadastroUsuario() {
 
 	return(
 		<>
-    <header>
+    <header class="cadUsu">
       <img src={logoShugo} alt="" id="logo" />
     </header>
 

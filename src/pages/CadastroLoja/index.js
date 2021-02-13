@@ -4,7 +4,7 @@ export default function CadstroLoja() {
 
 	return(
 	<>
-    <header>
+    <header class="cadLoj">
       <Link to="/home"><img src="../../assets/imagens/Group 1.png" alt="" id="logo" /></Link>
     </header>
 

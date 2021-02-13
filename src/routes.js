@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/CadastroUsuario";
 import EditPerfil from "./pages/EditPerfil";
+import Loja from "./pages/Loja";
 export default function Routes(){
 	return(
 		<Router>
@@ -28,6 +29,10 @@ export default function Routes(){
 
 				<Route path="/edit">
 					<EditPerfil/>
+					</Route>
+
+					<Route path="/loja">
+					<Loja/>
 					</Route>
 			</Switch>
 		</Router>

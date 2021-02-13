@@ -15,13 +15,13 @@ p{
   font-style: italic;
 }
 
-header{
+.edit {
   background-color:#5D9B9B;
   height:80px;
   display: flex;
 }
 
-header img{
+.edit img{
   padding: 15px 0;
   width: 200px;
 }
@@ -120,7 +120,7 @@ color: #5d9b9b;
   color: #5d9b9b;
 }
 
-.catalogo #titulo{
+.catalogo {
   position: relative;
   left: 50px;
   width: 1000px;
@@ -150,15 +150,13 @@ color: #5d9b9b;
 .itens #item{
   width: 100%;
   color: #5d9b9b;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#item{
-  width: 300px;
-  height: 100px;
-  background-color: white;
-  border-radius: 9px;
-  color: #5d9b9b;
-}
+
 
 #descricao{
   position: relative;
