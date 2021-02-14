@@ -8,8 +8,8 @@ import bannerImage1 from "../../assets/imagens/shugo1.png";
 import bannerImage2 from "../../assets/imagens/Frame 12.png";
 import bannerImage3 from "../../assets/imagens/Shugo 2.png";
 
-import styles from "./styles.css";
-import stylesCarrosel from "./styles_carrosel.css";
+import "./styles.css";
+import  "./styles_carrosel.css";
 
 export default function Home() {
   const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

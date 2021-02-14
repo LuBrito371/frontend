@@ -15,7 +15,7 @@ export default function CadastroUsuario() {
   const [nome,setNome]= useState("");
   
   async function cadastrarUsuario(){
-    api.post('/register/store',{
+    api.post('/register/user',{
       body: {
         email,
         password,
