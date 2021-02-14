@@ -8,7 +8,7 @@ export default function Header({children}) {
 		<div className="header">
 		<header className="container">
 			<div className="logo">
-				<img src={logo} width={200}/>
+				<Link to="/cadastrousuario"><img src={logo} width={200}/></Link>
 			</div>
 			<div>
 				<div className="search-container">

@@ -1,25 +1,39 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 
 import Header from "../../components/Header";
-
+import { Link } from "react-router-dom";
+import Store from "../../components/Store";
 import menuLogo from "../../assets/imagens/menu.png";
 import bannerImage1 from "../../assets/imagens/shugo1.png";
 import bannerImage2 from "../../assets/imagens/Frame 12.png";
 import bannerImage3 from "../../assets/imagens/Shugo 2.png";
-
+import logo from "../../assets/imagens/logo_shugo.png";
+import api from "../../services/api";
 import styles from "./styles.css";
 import stylesCarrosel from "./styles_carrosel.css";
 
 export default function Home() {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const [name, setName] = useState("");
+  const [slogan, setSlogan] = useState("");
+  const [image, setImage] = useState("");
+  
+  const[array,setArray] = useState("")
+  useEffect(() => {
+    async function chamaAPI() {
+        const response = await api.get("/index/store");
+        setArray(response.data)
+    }
+
+    chamaAPI();
+  }, []);
   return (
     <>
       <Header>
         <>
           <div className="parte_branca">
             <div class="filtro" onClick={() => open_options()}>
-              <img src={menuLogo} alt="" id="blue" />
+              <img src={menuLogo} />
               <h4>Procure por departamentos</h4>
             </div>
           </div>
@@ -61,7 +75,7 @@ export default function Home() {
               </div>
             </div>
             <div class="clothing">
-              <p  id="categoria">Vestuário</p>
+              <p id="categoria">Vestuário</p>
               <br></br>
               <div class="subcategorias">
                 <ul>Blusas</ul>
@@ -94,7 +108,10 @@ export default function Home() {
         </div>
       </Carousel>
       <div className="perfis  ">
-        <div className="itens perfis"></div>
+        <div className="itens perfis">
+        {array &&
+            array.map( loja => <Store loja={loja}/>)}
+        </div>
       </div>
     </>
   );

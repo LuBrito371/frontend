@@ -7,7 +7,7 @@ export default function TipoConta() {
   return (
     <>
       <header class="tipo">
-        <img src={logo} alt="" id="logo" />
+      <Link to="/home"><img src={logo} alt="" id="logo" /></Link>
       </header>
 
       <div id="inicio">
@@ -31,3 +31,4 @@ export default function TipoConta() {
     </>
   );
 }
+

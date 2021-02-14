@@ -49,7 +49,7 @@ p{
     width:500px;
 }
 
-input{
+#dados1Loja input, #dados2Loja input{
     width: 510px;
     height: 50px;
     border: 0;
@@ -103,3 +103,10 @@ input{
 #rodapéLoja{
     text-align: center;
 }
+
+#categoriasCad{
+    width:100px;
+    height:90px;
+    
+    margin-left:100px;
+  }

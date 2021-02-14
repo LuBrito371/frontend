@@ -27,8 +27,7 @@ export default function CadastroUsuario() {
 	return(
 		<>
     <header class="cad">
-      <img src={logoShugo} alt="" id="logo" />
-    </header>
+    <Link to="/home"><img src={logoShugo} alt="" id="logo" /></Link>   </header>
 
     <div id="inicio">
       <img src={userIcon} alt="" />

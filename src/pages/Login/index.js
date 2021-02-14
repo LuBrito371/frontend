@@ -34,8 +34,8 @@ export default function Login(){
 
 	return(
 		<>
-    <header class="login">
-      <img src={shugoLogo} alt="" id="logo"/>
+    <header className="login">
+    <Link to="/home"><img src={logo} alt="" id="logo" /></Link>
     </header>
     <div id="inicio">
       <img src={userIcon} alt="" />
@@ -45,23 +45,37 @@ export default function Login(){
     <div id="barrinha">
       <hr /><p>Entre com seus dados</p><hr/>
     </div>
+    <form className="formLogin" >
+        <div id="dados">
+        <p>Email</p>
+        <input  
+            type="text" 
+            id="email" 
+            value={email}
+            onChange={event => setEmail(event.target.value)}
+          />
+        <p>Senha</p>
+        <input type="password" 
+          id="senha"
+          value={password}
+          onChange={event => setPassword(event.target.value)}/>
+        <button id="login" type="submit">Login</button>
+      </div>
 
-    <div id="dados">
-      <p>Email</p>
-      <input  
-          type="text" 
-          id="email" 
-          value={email}
-          onChange={event => setEmail(event.target.value)}
-        />
-      <p>Senha</p>
-      <input type="password" 
-        id="senha"
-        value={password}
-        onChange={event => setPassword(event.target.value)}/>
-      <button id="login" onClick={()=> loginUser() }>Login</button>
-    </div>
+      <div id="check">
+        
+        <p>Selecione</p>
+        <select>
+          <option>Cliente</option>
+          <option>Loja</option>
+        </select>
 
+
+      </div>
+
+      
+    </form>
+    
     <div id="direcionar">
         <p>Não tem um cadastro? </p>
         <Link to="cadastro">Cadastre-se</Link>

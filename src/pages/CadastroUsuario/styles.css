@@ -49,7 +49,7 @@ p{
     width:500px;
 }
 
-input{
+#dados1 input, #dados2 input{
     width: 510px;
     height: 50px;
     border: 0;

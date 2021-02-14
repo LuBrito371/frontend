@@ -28,19 +28,37 @@ export default function CadstroLoja() {
         <input type="text" />
         <p>Telefone</p>
         <input type="text" />
-        <p>CNPJ</p>
+        <p>CPF</p>
+        <input type="text" />
+        <p>Descrição</p>
         <input type="text" />
       </div>
 
       <div id="dados2Loja">
+      <p>Nome</p>
+        <input type="text" />
+        <p>Slogan</p>
+        <input type="text" />
+        
         <p>Email</p>
         <input type="text" />
         <p>Senha</p>
         <input type="text" />
+        
         <Link to="/"><button id="botaoLoja">Cadastrar</button></Link>
       </div>
-    </div>
 
+      
+    </div>
+    <div id="categoriasCad">
+          <p>Selecione a categoria</p>
+          <select name="Categoria">
+            <option>Alimentação</option>
+            <option>Saude</option>
+            <option>Vestuário</option>
+              
+          </select>
+        </div>
     <div id="direcionarLoja">
       <p>Já tem uma conta?</p>
       <a href="login.html">Entrar</a>
