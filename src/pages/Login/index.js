@@ -14,7 +14,35 @@ export default function Login(){
   const history = useHistory();
 
   async function loginUser(){
-    const response = await api.get("/authenticate/store",{
+
+    try {
+
+      const response = await api.post("/shugo/authenticate/user", { email, password});
+
+      if(response.status == 400) {
+        alert("erro no login, veja se seus dados estão certos");
+        return 
+      }
+
+        var token = {
+          data : response.data.token,
+          type: "user"
+        }
+
+        localStorage.setItem("APITOKEN", JSON.stringify(token));
+        localStorage.setItem("userID", JSON.stringify(response.data.user._id));
+        history.push("home");
+        window.location.replace("http://localhost:3000/home");
+
+    } catch (error) {
+      console.log(error);
+      localStorage.setItem("tokenLocal", JSON.stringify(null));
+    }
+
+  }
+
+  async function loginStore(){
+    const response = await api.post("/shugo/authenticate/user",{
       body: {
         email,
         password
@@ -26,16 +54,31 @@ export default function Login(){
       return 
     }
 
-    localStorage.setItem("user", "");
-    localStorage.setItem("loja", "n");
-    
-    history.push("home");
+      var token = {
+        data : response.data.token,
+        type: "store"
+      }
+
+      localStorage.setItem("APITOKEN", JSON.stringify(token));
+      localStorage.setItem("storeID", JSON.stringify(response.data.store._id));
+      history.push("home");
+      window.location.replace("http://localhost:3000/home");
+  }
+
+  function login(e){
+    e.preventDefault();
+
+    var select = document.getElementById('selectCheck');
+		var option = select.options[select.selectedIndex];
+
+    if(option.value === "store") loginStore();
+    if(option.value === "user") loginUser();
   }
 
 	return(
 		<>
-    <header className="login">
-    <Link to="/home"><img src={logo} alt="" id="logo" /></Link>
+    <header class="login">
+      <img src={shugoLogo} alt="" id="logo"/>
     </header>
     <div id="inicio">
       <img src={userIcon} alt="" />
@@ -45,37 +88,39 @@ export default function Login(){
     <div id="barrinha">
       <hr /><p>Entre com seus dados</p><hr/>
     </div>
-    <form className="formLogin" >
+
+    <form className="formLogin" onSubmit={e => login(e)}>
         <div id="dados">
-        <p>Email</p>
-        <input  
-            type="text" 
-            id="email" 
-            value={email}
-            onChange={event => setEmail(event.target.value)}
-          />
-        <p>Senha</p>
-        <input type="password" 
-          id="senha"
-          value={password}
-          onChange={event => setPassword(event.target.value)}/>
-        <button id="login" type="submit">Login</button>
-      </div>
-
-      <div id="check">
         
-        <p>Selecione</p>
-        <select>
-          <option>Cliente</option>
-          <option>Loja</option>
-        </select>
+          <div id="check">
+            <p>Selecione sua conta</p>
+            <select id="selectCheck">
+              <option value="user">Cliente</option>
+              <option value="store">Loja</option>
+            </select>
+          </div>
 
+          <p>Email</p>
+          <input  
+              type="text" 
+              id="email" 
+              required
+              value={email}
+              onChange={event => setEmail(event.target.value)}
+            />
 
+          <p>Senha</p>
+          <input type="password" 
+            id="senha"
+            value={password}
+            required
+            onChange={event => setPassword(event.target.value)}/>
+        
+          <button id="login" type="submit">Login</button>
       </div>
-
-      
     </form>
     
+
     <div id="direcionar">
         <p>Não tem um cadastro? </p>
         <Link to="cadastro">Cadastre-se</Link>

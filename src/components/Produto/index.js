@@ -1,5 +1,6 @@
-import styles from "./styles.css";
-import { useHistory, Link } from "react-router-dom";
+
+import "./styles.css";
+
 export default function Produto({ produto }){
 	return(
 		<div className="container-produto">
@@ -10,12 +11,5 @@ export default function Produto({ produto }){
 			</div>
 		</div>
 	);
-
-	const history = useHistory()
-	function irLoja(){
-		
-		localStorage.setItem("/index/product", JSON.stringify(produto));
-	window.location.replace("http://localhost:3000/loja");
-	history.push("produto");
-	}
+	
 }

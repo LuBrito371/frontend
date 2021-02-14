@@ -70,3 +70,15 @@
 	border: none;
 	color: #5d9b9b;
 }
+
+.strongName{
+	margin-top: 8px;
+	width: 200px;
+	height: 50px;
+	align-items: center;
+	display: flex;
+}
+
+.strongName strong{
+	color: white;
+}

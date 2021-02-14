@@ -8,10 +8,12 @@ import menuLogo from "../../assets/imagens/menu.png";
 import bannerImage1 from "../../assets/imagens/shugo1.png";
 import bannerImage2 from "../../assets/imagens/Frame 12.png";
 import bannerImage3 from "../../assets/imagens/Shugo 2.png";
+
 import logo from "../../assets/imagens/logo_shugo.png";
 import api from "../../services/api";
 import styles from "./styles.css";
 import stylesCarrosel from "./styles_carrosel.css";
+
 
 export default function Home() {
   const [name, setName] = useState("");

@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import api from "../../services/api";
 
 import Produto from "../../components/Produto";
-import styles from "./styles.css";
+import  "./styles.css";
 
 import estrela1 from "../../assets/imagens/star_escura.png";
 import estrela2 from "../../assets/imagens/star_clara.png";

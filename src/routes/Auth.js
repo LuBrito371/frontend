@@ -5,7 +5,7 @@ export const isAuthenticated =  () => {
 
     var authenticated = false;
 
-    var data = localStorage.getItem("tokenLocal");
+    var data = localStorage.getItem("APITOKEN");
     var tokenLocal = JSON.parse(data);
 
     if(tokenLocal === null || tokenLocal === undefined) {
@@ -17,7 +17,7 @@ export const isAuthenticated =  () => {
                 if(err) authenticated = false;
                 else {
                     authenticated = true;
-                    localStorage.setItem("myIDAdmin", JSON.stringify(decoded.idStore));
+                    localStorage.setItem("myID_storeToken", JSON.stringify(decoded.idStore));
                 }
             }) 
         }
@@ -27,7 +27,7 @@ export const isAuthenticated =  () => {
                 if(err) authenticated = false;
                 else {
                     authenticated = true;
-                    localStorage.setItem("myIDAdmin", JSON.stringify(decoded.idUser));
+                    localStorage.setItem("myID_storeUser", JSON.stringify(decoded.idUser));
                 }
             }) 
         }
