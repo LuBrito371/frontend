@@ -1,3 +1,5 @@
+import { useHistory, Link } from "react-router-dom";
+
 import styles from "./styles.css";
 import logo from "../../assets/imagens/logo_shugo.png"
 
@@ -6,8 +8,7 @@ export default function EditPerfil() {
   return (
 
     <>
-      <header class="edit">
-        <img src={logo} alt="" />
+      <header class="edit"><Link to="/home"><img src={logo} alt="" id="logo" /></Link>
       </header>
 
       <div id="capa">
@@ -100,27 +101,14 @@ export default function EditPerfil() {
           </button>
         </div>
 
+
         <div id="categorias">
           <p>Selecione a categoria</p>
           <select name="Categoria">
-            <option>Pizza</option>
-            <option>Hambúguer</option>
-            <option>Doces</option>
-            <option>Salgados</option>
-            <option>Oriental</option>
-            <option>Massas</option>
-            <option>Sorvete e Açaí</option>
-            <option>Vegano</option>
-            <option>Medicamentos</option>
-            <option>Perfumaria</option>
+            <option>Alimentação</option>
+            <option>Saude</option>
+            <option>Vestuário</option>
 
-            <option value="">Blusas</option>
-            <option>Calças</option>
-            <option>Moda Infantil</option>
-            <option>Moda Feminina</option>
-            <option>Moda Masculina</option>
-            <option>Calçados</option>
-            <option>Acessórios</option>
           </select>
         </div>
       </div>
@@ -137,7 +125,20 @@ export default function EditPerfil() {
         </div>
       </div>
 
-      
+      <div id="descricao">
+      <h3>Descrição</h3>
+      <input type="text" id="desc" />
+      <button id="addD">add</button>
+      <p id="d">Adicionar descrição</p>
+
+      <input type="text" id="ender" />
+      <button id="addE">add</button>
+      <p id="e">Adicionar endereço</p>
+
+      <input type="text" id="telef" />
+      <button id="addT">add</button>
+      <p id="t">Adicionar telefone</p>
+    </div>      
     </>
   );
 }

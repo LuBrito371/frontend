@@ -19,6 +19,9 @@ export default function CadastroLoja() {
   
   async function cadastrarStore(e){
     e.preventDefault();
+
+    var select = document.getElementById('selectCheck');
+		var option = select.options[select.selectedIndex];
     
     const response = await api.post('/shugo/register/store', {
         name,
@@ -29,7 +32,7 @@ export default function CadastroLoja() {
         CPF_CNPJ,
         address,
         phone,
-        category
+        category: option.value
       });
 
       var token = {
@@ -63,7 +66,18 @@ export default function CadastroLoja() {
 
     <form className="cadastroLoja" onSubmit={e => cadastrarStore(e)}>
         <div class="dadosLoja">
+        
           <div id="dados1Loja">
+
+          <div id="categoriasCad">
+          <p>Selecione a categoria</p>
+          <select name="Categoria" id="selectCadastroLoja">
+            <option>Alimentação</option>
+            <option>Saude</option>
+            <option>Vestuário</option>
+              
+          </select>
+        </div>
 
             <p>Endereço</p>
             <input type="text" 
@@ -75,7 +89,7 @@ export default function CadastroLoja() {
             value={phone}
             onChange={event => setPhone(event.target.value)}/>
 
-            <p>CNPJ</p>
+            <p>CPF</p>
             <input type="text" 
             value={CPF_CNPJ}
             onChange={event => setCPF_CNPJ(event.target.value)}/>
@@ -91,8 +105,29 @@ export default function CadastroLoja() {
             <input type="text" 
             value={password}
             onChange={event => setPassword(event.target.value)}/>
+
+            <p>Nome</p>
+            <input type="text" 
+            value={name}
+            onChange={event => setName(event.target.value)}/>
+
+            <p>Slogan</p>
+            <input type="text" 
+            value={slogan}
+            onChange={event => setSlogan(event.target.value)}/>
+
             <button id="botaoLoja">Cadastrar</button>
           </div>
+        </div>
+
+        <div id="categoriasCad">
+          <p>Selecione a categoria</p>
+          <select name="Categoria" id="selectCadastroLoja">
+            <option>Alimentação</option>
+            <option>Saude</option>
+            <option>Vestuário</option>
+              
+          </select>
         </div>
     
     </form>  

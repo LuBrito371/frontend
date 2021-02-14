@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import { Carousel } from "react-responsive-carousel";
+import api from "../../services/api";
+
 import Produto from "../../components/Produto";
 import  "./styles.css";
 
@@ -7,7 +11,15 @@ import estrela2 from "../../assets/imagens/star_clara.png";
 import Header from "../../components/Header";
 
 export default function Loja() {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const[array,setArray] = useState("")
+  useEffect(() => {
+    async function chamaAPI() {
+        const response = await api.get("/index/store");
+        setArray(response.data)
+    }
+
+    chamaAPI();
+  }, []);
 
   return (
     <>
@@ -42,14 +54,8 @@ export default function Loja() {
           <br />
         </div>
         <div className="itens">
-          {data &&
-            data.map(() => (
-              <Produto
-                image="https://ui-avatars.com/api/?name=Ryann+Ferreira?size=16?background=random"
-                name="teste"
-                price="2,50"
-              />
-            ))}
+        {array &&
+            array.map( produto => <Produto produto={produto}/>)}
         </div>
       </div>
 
