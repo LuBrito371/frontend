@@ -20,7 +20,7 @@ export default function CadastroLoja() {
   async function cadastrarStore(e){
     e.preventDefault();
 
-    var select = document.getElementById('selectCheck');
+    var select = document.getElementById('selectCadastroLoja');
 		var option = select.options[select.selectedIndex];
     
     const response = await api.post('/shugo/register/store', {
@@ -120,15 +120,7 @@ export default function CadastroLoja() {
           </div>
         </div>
 
-        <div id="categoriasCad">
-          <p>Selecione a categoria</p>
-          <select name="Categoria" id="selectCadastroLoja">
-            <option>Alimentação</option>
-            <option>Saude</option>
-            <option>Vestuário</option>
-              
-          </select>
-        </div>
+       
     
     </form>  
 
